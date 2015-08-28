@@ -12,8 +12,8 @@ git:
 
 before_install:
   # Prepare compilers
+  - echo "yes" | sudo add-apt-repository 'deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu precise main';
   - if [ "$CXX" = "g++" ]; then
-      sudo add-apt-repository 'deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu precise main';
       sudo apt-get install g++-4.8 -qq;
       export CXX="g++-4.8" CC="gcc-4.8";
     fi
